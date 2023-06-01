@@ -2,12 +2,14 @@
   "name": "node-weather",
   "version": "1.0.0",
   "description": "Node.js weather app",
-  "main": "index.js",
+  "main": "dist/app.js",
   "repository": "https://github.com/artemshchirov/node-weather.git",
   "author": "Artem Shchirov <artemshchirov@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "start": "npx ts-node app.ts "
+    "build": "tsc",
+    "start": "node dist/app.js"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
