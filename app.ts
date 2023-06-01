@@ -47,7 +47,7 @@ const server: http.Server = http.createServer((req: http.IncomingMessage, res: h
     const html = `
       <html>
         <body style="background: black;">
-          <form style="color: white;" method="post" action="https://node-weather-entc.onrender.com">Name: 
+          <form style="color: white;" method="post" action="https://node-weather-entc.onrender.com">City: 
             <input type="text" name="name" />
             <input type="submit" value="Submit" />
           </form>
