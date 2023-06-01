@@ -1,7 +1,12 @@
 import * as http from 'http';
 import * as https from 'https';
 
+// local
+// const hostname = '127.0.0.1';
+
+// deploy
 const hostname = '0.0.0.0';
+
 const port = 3000;
 
 const server: http.Server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
@@ -30,6 +35,7 @@ const server: http.Server = http.createServer((req: http.IncomingMessage, res: h
             <html>
               <body style="background: black; color: white;">
                 ${weather}
+                <a href="https://github.com/artemshchirov/node-weather">Link to repo</a>
               </body>
             </html>`;
 
@@ -41,7 +47,7 @@ const server: http.Server = http.createServer((req: http.IncomingMessage, res: h
     const html = `
       <html>
         <body style="background: black;">
-          <form style="color: white;" method="post" action="http://localhost:3000">Name: 
+          <form style="color: white;" method="post" action="https://node-weather-entc.onrender.com">Name: 
             <input type="text" name="name" />
             <input type="submit" value="Submit" />
           </form>
